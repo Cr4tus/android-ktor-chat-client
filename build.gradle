@@ -1,0 +1,24 @@
+buildscript {
+    ext {
+        compose_version = '1.0.1'
+        ktor_version = '1.6.3'
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // gradle
+        classpath "com.android.tools.build:gradle:7.0.3"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21"
+        // kotlin
+        classpath "org.jetbrains.kotlin:kotlin-serialization:1.5.21"
+        // dagger & hilt
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.38.1"
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
